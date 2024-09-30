@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ладносмотр</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            gap: 1rem;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        html, body {
+            height: 100%;
+        }
+
+        img {
+            width: 40%;
+        }
+
+        a {
+            color: #ff6600;
+            transition: color 0.3s;
+        }
+
+        .unact {
+            color: #ff6600;
+            padding: 10px 10%;
+            background-color: #ffffff;
+            border: 2px solid #ff6600;
+            border-radius: 20px;
+            cursor: not-allowed;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Плавный переход для фона, цвета текста и границы */
+        }
+
+        .act {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 10%;
+            background-color: #ff6600;
+            border: 2px solid #ff6600;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Плавный переход для фона, цвета текста и границы */
+        }
+
+        .agreement-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .agreement-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-container input[type="checkbox"] {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ff6600;
+            border-radius: 4px;
+            margin-right: 10px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .checkbox-container input[type="checkbox"]:checked {
+            background-color: #ff6600;
+            border-color: #ff6600;
+        }
+        .checkbox-container input[type="checkbox"]:checked::after {
+            content: "";
+            position: absolute;
+            top: 6%;
+            left: 25%;
+            width: 6px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        .checkbox-label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        @media (max-width: 400px) {
+            img {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="logo.png" alt="">
+    <p>Прежде чем вы сможете использовать Ладносмотр<sup>ρ</sup> ознакомьтесь с правилами использования</p>
+    <a href="soglash.html">пользовательское соглашение</a>
+    <div class="checkbox-container">
+        <input type="checkbox" id="agreement">
+        <label class="checkbox-label" for="agreement">Я прочитал пользовательское соглашение</label>
+    </div>
+    <a id="nextButton" class="unact" href="" onclick="return true;">
+        Далее
+    </a>
+
+    <script>
+        const checkbox = document.getElementById('agreement');
+        const nextButton = document.getElementById('nextButton');
+
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                nextButton.classList.remove('unact');
+                nextButton.classList.add('act');
+                nextButton.href = "main_page.html";
+            } else {
+                nextButton.classList.remove('act');
+                nextButton.classList.add('unact');
+                nextButton.href = "";
+            }
+        });
+    </script>
+</body>
+</html>

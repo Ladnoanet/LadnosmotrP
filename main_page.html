@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ладносмотр</title>
+    <style>
+               body {
+            background: #ffffff;
+            gap: 1rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        img {
+            width: 40%;
+        }
+
+        a {
+            color: #ff6600;
+            transition: color 0.3s;
+        }
+
+        .unact {
+            color: #ff6600;
+            padding: 10px 10%;
+            background-color: #ffffff;
+            border: 2px solid #ff6600;
+            border-radius: 20px;
+            cursor: not-allowed;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Плавный переход для фона, цвета текста и границы */
+        }
+
+        .act {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 10%;
+            background-color: #ff6600;
+            border: 2px solid #ff6600;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Плавный переход для фона, цвета текста и границы */
+        }
+
+        .agreement-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .agreement-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-container input[type="checkbox"] {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ff6600;
+            border-radius: 4px;
+            margin-right: 10px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .checkbox-container input[type="checkbox"]:checked {
+            background-color: #ff6600;
+            border-color: #ff6600;
+        }
+        .checkbox-container input[type="checkbox"]:checked::after {
+            content: "";
+            position: absolute;
+            top: 6%;
+            left: 25%;
+            width: 6px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        .checkbox-label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        sup {
+            color: #ff6600;
+        }
+
+        .logo {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .navigation {
+            color: white;
+            text-decoration: none;
+            background-color: #ff6600;
+            padding: 5px;
+            border-radius: 10px;
+            border: 3px solid rgb(255, 255, 255);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            margin-left: 230px;
+            margin-top: -45px;
+        }
+        nav ul li {
+            margin: 0 5px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: padding 0.3s;
+            background-color: #ff6600;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        nav a:hover {
+            padding: 10px;
+            transform: scale(1.1);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .video {
+            width: 30%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .video img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .video h2 {
+            color: black;
+        }
+
+        .video p {
+            color: #525252;
+            margin-top: -13px;
+        }
+
+        main {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        @media (max-width: 670px) {
+            .video h2 {
+                font-size: 16px; /* Уменьшаем размер заголовка для маленьких экранов */
+            }
+
+            .video p {
+                font-size: 12px; /* Уменьшаем размер текста для маленьких экранов */
+            }
+
+            .logo {
+                font-size: 25px; /* Уменьшаем размер логотипа для мобильных */
+            }
+
+            .video {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .video-content {
+            text-align: center;
+        }
+
+        .video h2 {
+            color: black;
+            font-size: 18px;
+        }
+
+        .video p {
+            color: #525252;
+            margin-top: -13px;
+            font-size: 14px; 
+        }
+
+        main {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            justify-content: center;
+        }
+        }
+
+        @media (max-width: 670px) {
+            img {
+                width: 80%;
+            }
+
+            .logo {
+            text-align: center;
+            font-size: 13px;
+            }
+
+            nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <h1>Ладносмотр<sup>ρ</sup></h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="https://t.me/TupoLadno">support</a></li>
+            <li><a href="https://t.me/TupoLadno">publish</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="video">
+            <a href="0001.html">
+                <img src="0001.png" alt="Video Thumbnail">
+                <div class="video-content">
+                    <h2>Михаил беляев белый сникерс</h2>
+                    <p>MrMotilek76 ✓ • 2024.08.03</p>
+                </div>
+            </a>
+        </div>
+        <div class="video">
+            <a href="0002.html">
+                <img src="0002.png" alt="Video Thumbnail">
+                <div class="video-content">
+                    <h2>всем по καλαμπόκι</h2>
+                    <p>MrMotilek76 ✓ • 2024.09.22</p>
+                </div>
+            </a>
+        </div>
+        <div class="video">
+            <a href="0003.html">
+                <img src="0003.png" alt="Video Thumbnail">
+                <div class="video-content">
+                    <h2>vetrbor music</h2>
+                    <p>MrMotilek76 ✓ • 2024.09.27</p>
+                </div>
+            </a>
+        </div>
+    </main>
+</body>
+</html>

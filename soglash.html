@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ладносмотр</title>
+    <style>
+                body {
+            margin: 0;
+            align-items: center;
+            background: #ffffff;
+            gap: 1rem;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        html, body {
+            height: 100%;
+        }
+
+        img {
+            width: 40%;
+        }
+
+        a {
+            color: #ff6600
+        }
+
+        .agreement-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .agreement-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-container input[type="checkbox"] {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ff6600;
+            border-radius: 4px;
+            margin-right: 10px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .checkbox-container input[type="checkbox"]:checked {
+            background-color: #ff6600;
+            border-color: #ff6600;
+        }
+        .checkbox-container input[type="checkbox"]:checked::after {
+            content: "";
+            position: absolute;
+            top: 6%;
+            left: 25%;
+            width: 6px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        .checkbox-label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        h1 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin-left: 20px;
+        }
+
+        @media (max-width: 400px) {
+
+            img {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Условия Соглашения</h1>
+
+    <p>Перед использованием <strong><p>Ладносмотр<sup>ρ</sup></p></strong> пожалуйста, примите во внимание следующее:</p>
+
+    <p>Данный продукт является прототипом с базовыми функциями:</p>
+    <ul>
+        <li>Просмотр видео;</li>
+        <li>Лайки и дизлайки;</li>
+        <li>Техническая поддержка.</li>
+    </ul>
+
+    <p>Вся информация является конфиденциальной, и системы аккаунтов отсутствуют. Продукт предоставляется "как есть" без гарантии на полную функциональность.</p>
+    <a href="index.html">назад</a>
+</body>
+</html>

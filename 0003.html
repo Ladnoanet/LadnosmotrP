@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ладносмотр</title>
+    <style>
+        body {
+            background: #ffffff;
+            gap: 1rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            height: 100vh; /* Задаем высоту на весь экран */
+            margin: 0;
+        }
+
+        img {
+            width: 40%;
+        }
+
+        a {
+            color: #ff6600;
+            transition: color 0.3s;
+        }
+
+        .unact {
+            color: #ff6600;
+            padding: 10px 10%;
+            background-color: #ffffff;
+            border: 2px solid #ff6600;
+            border-radius: 20px;
+            cursor: not-allowed;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .act {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 10%;
+            background-color: #ff6600;
+            border: 2px solid #ff6600;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .agreement-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .agreement-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ff6600;
+            border-radius: 4px;
+            margin-right: 10px;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .checkbox-container input[type="checkbox"]:checked {
+            background-color: #ff6600;
+            border-color: #ff6600;
+        }
+
+        .checkbox-container input[type="checkbox"]:checked::after {
+            content: "";
+            position: absolute;
+            top: 6%;
+            left: 25%;
+            width: 6px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        .checkbox-label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        sup {
+            color: #ff6600;
+        }
+
+        .logo {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .navigation {
+            color: white;
+            text-decoration: none;
+            background-color: #ff6600;
+            padding: 5px;
+            border-radius: 10px;
+            border: 3px solid rgb(255, 255, 255);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            margin-left: 230px;
+            margin-top: -65px;
+        }
+
+        nav ul li {
+            margin: 0 5px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: padding 0.3s;
+            background-color: #ff6600;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        nav a:hover {
+            padding: 10px;
+            transform: scale(1.1);
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center; /* Центрируем видеоплеер */
+            margin-top: 20px; /* Отступ сверху */
+        }
+
+        .video {
+            width: 70%; /* Ширина плеера */
+            max-width: 800px; /* Максимальная ширина плеера */
+            border-radius: 15px; /* Закругление углов */
+            overflow: hidden; /* Скрываем переполнение */
+        }
+
+        main {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        .info {
+            margin-left: -15%;
+            margin-top: -20px;
+        }
+
+        .info p {
+            color: #6e6e6e;
+            margin-top: -10px;
+        }
+
+        @media (max-width: 400px) {
+            img {
+                width: 80%;
+            }
+
+            .logo {
+                text-align: center;
+                font-size: 25px;
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            .video {
+            width: 100%; 
+            border-radius: 0px;
+            max-width: 800px; 
+            overflow: hidden; 
+        }
+
+        .info {
+            margin-left: 10px;
+            margin-top: -20px;
+        }
+
+        .info p {
+            color: #6e6e6e;
+            margin-top: -10px;
+        }
+        }
+    </style>
+</head>
+<logo>
+    <a style="color: black; text-decoration: none;" href="main_page.html"><h1 class="logo">Ладносмотр<sup>ρ</sup></h1></a>
+</logo>
+<body>
+    <div class="video-container">
+        <video class="video" controls>
+            <source src="0003.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+    </div>
+    <div class="info">
+    <h2>vetrbor music</h2>
+    <p>MrMotilek76 ✓ • 2024.09.27</p>
+</div>
