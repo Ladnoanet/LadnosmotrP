@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ладносмотр</title>
+    <style>
+        body {
+            background: #ffffff;
+            gap: 1rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            flex-direction: column;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        img {
+            width: 40%;
+        }
+
+        a {
+            color: #ff6600;
+            transition: color 0.3s;
+        }
+
+        .unact {
+            color: #ff6600;
+            padding: 10px 10%;
+            background-color: #ffffff;
+            border: 2px solid #ff6600;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .unact:hover {
+            color: #ffffff;
+            padding: 10px 10%;
+            background-color: #ff6600;
+            border: 2px solid #ff6600;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        .act {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 10%;
+            background-color: #ff6600;
+            border: 2px solid #ff6600;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .logo {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .logo sup {
+            color: #ff6600;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            margin-left: 230px;
+            margin-top: -65px;
+        }
+
+        nav ul li {
+            margin: 0 5px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: padding 0.3s;
+            background-color: #ff6600;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        nav a:hover {
+            padding: 10px;
+            transform: scale(1.1);
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .video {
+            width: 70%;
+            max-width: 800px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        main {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        .info {
+            margin-left: -15%;
+            margin-top: -20px;
+        }
+
+        .info p {
+            color: #6e6e6e;
+            margin-top: -10px;
+        }
+
+        li {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        @keyframes heartbeat {
+            0%, 20%, 40%, 60%, 80%, 100% {
+                transform: scale(1.);
+            }
+            10%, 30%, 50%, 70%, 90% {
+                transform: scale(1.1);
+            }
+        }
+
+        svg {
+            animation: heartbeat 1s infinite;
+            width: 40%;
+            height: 40%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        @media (max-width: 400px) {
+            img {
+                width: 80%;
+            }
+
+            .logo {
+                text-align: center;
+                font-size: 25px;
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            .video {
+                width: 100%;
+                border-radius: 0px;
+                max-width: 800px;
+                overflow: hidden;
+            }
+
+            .info {
+                margin-left: 10px;
+                margin-top: -20px;
+            }
+
+            .info p {
+                color: #6e6e6e;
+                margin-top: -10px;
+            }
+        }
+    </style>
+</head>
+<logo>
+    <a style="color: black; text-decoration: none;" href="main_page.html"><h1 class="logo">Ладносмотр<sup>ρ</sup></h1></a>
+</logo>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#ff6600">
+        <path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/>
+    </svg>
+    <h2>Спасибо за все!</h2>
+    <h3>MrMotilek76</h3>
+    <h2>Доп спасибо:</h2>
+    <ul>
+        <li>Lavrendr</li>
+        <li>ViKYSs Penqs</li>
+        <li>Госпожа Оливер</li>
+        <li>καλαμπόκι</li>
+    </ul>
+    <br><br>
+    <a id="nextButton" class="unact" href="main_page.html">
+        на главную
+    </a>
+    <br><br><br>
+</body>
+</html>

@@ -270,5 +270,16 @@
             </a>
         </div>
     </main>
+    <script>
+        let clickCount = 0;
+        const logo = document.querySelector('.logo h1');
+    
+        logo.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount >= 5) { 
+                window.location.href = 'Easter_egg.html';
+            }
+        });
+    </script>    
 </body>
 </html>
